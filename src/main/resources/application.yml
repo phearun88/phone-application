@@ -1,0 +1,23 @@
+server:
+  port: 9999
+
+
+spring:
+  # Database
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/phoneshop
+    username: postgres
+    password: admin
+
+  # JPA properties
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  #disable SerializationFeature
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+
