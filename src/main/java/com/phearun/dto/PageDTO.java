@@ -15,7 +15,7 @@ public class PageDTO {
 
     private List<?> list;
     private PaginationDTO pagination;
-    public PageDTO(Page<?> page){
+   // public PageDTO(Page<?> page){
 
 
 
@@ -40,6 +40,6 @@ public class PageDTO {
         this.pagination.setTotalPages(page.getTotalPages());
         */
 
-    }
+   // }
 
 }

@@ -9,6 +9,9 @@ spring:
     url: jdbc:postgresql://localhost:5432/phoneshop
     username: postgres
     password: admin
+  h2:
+    console:
+      enabled: true
 
   # JPA properties
   jpa:

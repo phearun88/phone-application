@@ -5,6 +5,7 @@ import com.phearun.exception.ApiException;
 import com.phearun.mapper.BrandMapper;
 import com.phearun.model.Brand;
 import com.phearun.service.BrandService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,10 +14,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/brands")
+@RequiredArgsConstructor
 public class BrandController {
 
-    @Autowired
-    private BrandService brandService;
+
+    private final BrandService brandService;
 
     @PostMapping
     public ResponseEntity<Brand> create(@RequestBody BrandDTO brandDTO){
